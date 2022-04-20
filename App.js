@@ -2,6 +2,7 @@ import Home from "./Screens/Home";
 import * as React from "react";
 import { useFonts } from "expo-font";
 import MainRout from "./routes/MainRout";
+import Test from "./Screens/Test/Test";
 // import Navigator from './routes/homeStack'
 
 
@@ -18,7 +19,7 @@ export default function App() {
   }
 
   return (
-  <MainRout/>  
+  <Test/>   
   ) 
 }
  
