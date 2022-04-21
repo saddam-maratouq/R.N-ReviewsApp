@@ -32,7 +32,7 @@ export const globalStyles = StyleSheet.create({
   },
   Centerd_modal: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "center", 
     alignItems: "center",
     backgroundColor:'#00000099'
   },
@@ -61,9 +61,15 @@ export const globalStyles = StyleSheet.create({
     // margin : 10,
     paddingBottom:10,
     paddingTop:14,
-    backgroundColor:'#f00',
+    backgroundColor:'blue',
     borderBottomRightRadius : 10,
     borderBottomLeftRadius:10 , 
 
-  }
+  } , 
+  regester_img : {
+    width:70,
+    height:70, 
+    margin: 10 , 
+   
+  } , 
 });

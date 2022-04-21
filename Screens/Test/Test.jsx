@@ -7,8 +7,11 @@ import {
   Alert,
   ToastAndroid,
   Modal,
-  Pressable
+  Pressable,
+  ImageBackground,
+  Image,
 } from "react-native";
+
 import { globalStyles } from "../../Styles/Global";
 
 import React, { useState } from "react";
@@ -47,28 +50,34 @@ export default function Test() {
   };
 
   return (
-    <View style={globalStyles.container}>
+    <ImageBackground
+      style={globalStyles.container}
+      source={require("../../assets/image/blue.jpg")}
+    >
       <Modal
         visible={warnning}
         onRequestClose={() => setWarnning(false)}
         transparent
       >
         <View style={globalStyles.Centerd_modal}>
-          <View style={globalStyles.warning_Modal}> 
-          <View style={globalStyles.Modal_title}>
-            <Text style={globalStyles.pargraph} > Warning </Text>
-          </View> 
-          <View style={globalStyles.warn_body}>
-            <Text style={globalStyles.pargraph}>
-              your name must be longer 
-            </Text> 
-            </View> 
-            <Pressable onPress={() => setWarnning(false)} >
-              <Text style={globalStyles.Modal_press}> ok </Text> 
-            </Pressable> 
-          </View> 
+          <View style={globalStyles.warning_Modal}>
+            <View style={globalStyles.Modal_title}>
+              <Text style={globalStyles.pargraph}> Warning </Text>
+            </View>
+            <View style={globalStyles.warn_body}>
+              <Text style={globalStyles.pargraph}>
+                your name must be longer
+              </Text>
+            </View>
+            <Pressable
+              onPress={() => setWarnning(false)}
+              android_ripple={{ color: "black" }}
+            >
+              <Text style={globalStyles.Modal_press}> ok </Text>
+            </Pressable>
+          </View>
         </View>
-      </Modal> 
+      </Modal>
 
       <Text style={globalStyles.pargraph}> please enter your name : </Text>
       <TextInput
@@ -79,8 +88,25 @@ export default function Test() {
       <Button title={submit ? "Clear" : "submit"} onPress={submitHandler} />
 
       {submit ? (
+        <> 
         <Text style={globalStyles.pargraph}> Your regesterd as {name} </Text>
-      ) : null}
-    </View>
+         
+        <Image
+          style={globalStyles.regester_img}
+          source={require("../../assets/image/done.png")}
+          // source={{uri : 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Radiation_warning_symbol.svg/1024px-Radiation_warning_symbol.svg.png'}}
+          resizeMode='stretch' 
+        /> 
+        </> 
+      ) 
+       : 
+      (
+        <Image
+          style={globalStyles.regester_img}
+          source={require("../../assets/image/error.png")}
+          resizeMode='stretch' 
+        /> 
+      )}
+    </ImageBackground>
   );
 }

@@ -73,4 +73,17 @@ the best way to handel all that by custom modal : you need style and some feathe
       </Modal> 
 
         you have also to make some style .... 
-      ________________________________________________
+      ________________________________________________ 
+
+
+      how to add image , backgroundImage from react-Native library 
+
+       <Image
+          style={globalStyles.regester_img}
+          source={require("../../assets/image/done.png")}
+          resizeMode='stretch' 
+        /> 
+
+         resizeMode='stretch'  to make photo good look if its note square
+
+        #you can also add image source from internet by use source {uni={''}}
