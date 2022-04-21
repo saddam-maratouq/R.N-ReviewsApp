@@ -87,3 +87,10 @@ the best way to handel all that by custom modal : you need style and some feathe
          resizeMode='stretch'  to make photo good look if its note square
 
         #you can also add image source from internet by use source {uni={''}}
+
+        _____________________________________________________________________________ 
+
+
+        Navigation Notes : Tab bar Navigation .... 
+
+        

@@ -96,6 +96,7 @@ export default function Test() {
           source={require("../../assets/image/done.png")}
           // source={{uri : 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Radiation_warning_symbol.svg/1024px-Radiation_warning_symbol.svg.png'}}
           resizeMode='stretch' 
+          blurRadius={3}
         /> 
         </> 
       ) 

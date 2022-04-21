@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
+
+
+
 export const globalStyles = StyleSheet.create({
   container: {
     padding: 20,
